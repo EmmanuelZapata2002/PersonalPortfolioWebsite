@@ -8,81 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
      crossorigin="anonymous">
-
-    <style>
-      /* Add the following into a style.css file later once you are completely done */
-
-    
-      hr {
-        border: none;
-        color: transparent;
-        background-color: transparent;
-        height: 0; /* Adjust if you want to keep some spacing */
-      }
-      footer{
-      bottom: 2%;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      color: white;
-      font-weight: bold;
-  }
-    .custom-margin-bottom {
-        margin-bottom: 100px; /* Adjust the value as needed */
-    }
-
-    .social_media_links{
-      margin-left: 500px;
-    }
-      
-      .centered-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Horizontally center */
-            justify-content: center; /* Vertically center */
-            height: 100%; /* Set a height if necessary */
-        }
-
-
-      .col-md-3 {
-          
-          background-color: rgba(0, 0, 0, 0.5);
-          margin: 40px;
-         
-      }
-
-      .col-md-3:hover{
-          transform: translateY(-10px);
-      }
-        /* Additional styles for social media images */
-        .spotify_image{
-            border: 2px ridge black;
-            border-radius: 15px 50px;
-        }
-
-        .insta_image{
-            border: 2px ridge black;
-            border-radius: 15px 50px;
-        }
-
-        .linkedin_image{
-            border: 2px ridge black;
-            border-radius: 15px 50px;
-        }
-
-        .social_media_links :hover{
-            transform: translateY(-2px);
-        }
-
-        body {
-        background: url(Images/main.png) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        
-        }
-    </style>
+     <link rel="stylesheet" href="styles_homepage.css">
 </head>
 <body>
 
@@ -180,10 +106,7 @@
     </main>
 
 
-
-
-<!-- 
-      footer is currently within the bootstrap grid system. -->
+    <!-- footer is currently within the bootstrap grid system. -->
       <footer style = "color:white;">
         <div class="container">
             <div class="row">
@@ -200,10 +123,6 @@
         </div>
     </footer>
 
-  
-
-  
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
     crossorigin="anonymous"></script> 
@@ -212,80 +131,8 @@
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" 
     crossorigin="anonymous"></script>
 
-
-    <script>
-      // For the exact time to be shown at start-up of the screen.
-      var current_time = new Date();
-      var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-      var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-      var day_Num = current_time.getDate();
-
-      var month = monthNames[current_time.getMonth()];
-      var day = dayNames[current_time.getDay()];
+    <script src="update_RealTime.js"></script>
+    <script src="slideshow_Home.js"></script>
   
-      var hours = current_time.getHours();
-      if (hours <10){
-        hours = hours.toString().padStart(2,'0');
-      }
-
-      var minutes = current_time.getMinutes();
-      // Condition set here to show that if the value of minutes is not double digits, then add a zero in front of it.
-      if (minutes < 10){
-          minutes = minutes.toString().padStart(2,'0');
-      }
-
-      var seconds = current_time.getSeconds();
-      if(seconds < 10){
-        seconds = seconds.toString().padStart(2,'0');
-      }
-      
-      var time_zone = current_time.getTimezoneOffset();
-
-      var current_Date = day + " " + month + " " + day_Num + ", " + hours + ":" + minutes + ":" + seconds;
-      document.getElementById("current-time").textContent = current_Date;
-  </script>
-
-
-
-
-  <script>
-    // For the slideshows to occur
-    function imageSwap(classes) {
-      classes.forEach(cls => {
-        const elements = document.querySelectorAll("." + cls);
-        let imageIndex = 0;
-    
-        // Initially hide all images
-        elements.forEach(element => {
-          element.style.display = "none";
-        });
-    
-        // Function to change the image
-        function changeImage() {
-          elements[imageIndex].style.display = "none";
-          imageIndex = (imageIndex + 1) % elements.length;
-          elements[imageIndex].style.display = "block";
-        }
-    
-        // Start displaying the first image after a brief delay
-        setTimeout(() => {
-          elements[0].style.display = "block";
-          // Set interval for each class
-          setInterval(changeImage, image_interval);
-        }, 100); // Delay in milliseconds, adjust as needed
-      });
-    }
-    
-    // Array of all classes you want to include in the slideshow
-    const classes = ["slider", "projects", "involvements"];
-    const image_interval = 3500; // Interval for the slideshow
-    
-    // Initialize the slideshow for all classes
-    imageSwap(classes);
-    </script>
-
 </body>
 </html>
-
-<!-- I want to see if this works when committing my changes -->
-<!-- Added another comment here -->
