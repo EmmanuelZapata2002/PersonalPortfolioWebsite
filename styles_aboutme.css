@@ -37,3 +37,47 @@ hr {
     .social_media_links :hover{
         transform: translateY(-2px);
     }
+
+
+   .col-lg-6{
+    color: white;
+   }
+
+   .img-profile {
+    max-width: 400px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 90px;
+
+}
+
+/* Fade in from the left for text */
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Fade in from the right for image */
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fade-in-left {
+    animation: fadeInLeft 1s ease-out forwards;
+  }
+  
+  .fade-in-right {
+    animation: fadeInRight 1s ease-out forwards;
+  }
