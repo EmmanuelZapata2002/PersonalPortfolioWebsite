@@ -126,3 +126,14 @@
           from, to { color: transparent; }
           50% { color: black; }
         }
+
+
+        @media (max-width: 768px) {
+          .social_media_links {
+            margin-left: 0;
+          }
+
+          .body{
+            margin-left: 0;
+          }
+        }
