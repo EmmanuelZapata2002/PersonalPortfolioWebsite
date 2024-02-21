@@ -41,6 +41,10 @@ hr {
 
    .col-lg-6{
     color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding: 20px; /* Add some padding around the text */
+    border-radius: 5px; /* Optional: rounds the corners of the background */
+    
    }
 
    .img-profile {
@@ -81,3 +85,7 @@ hr {
   .fade-in-right {
     animation: fadeInRight 1s ease-out forwards;
   }
+
+  .image-slideshow {
+    margin-top: 60px; /* Adjust the value as needed */
+}
