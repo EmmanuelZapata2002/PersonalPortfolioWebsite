@@ -1,0 +1,39 @@
+body {
+    background: url(Images/main.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    }
+
+hr {
+    border: none;
+    color: transparent;
+    background-color: transparent;
+    height: 0; /* Adjust if you want to keep some spacing */
+    }
+
+
+    .social_media_links{
+        margin-left: 500px;
+      }
+      
+    .spotify_image{
+        border: 2px ridge black;
+        border-radius: 15px 50px;
+    }
+
+    .insta_image{
+        border: 2px ridge black;
+        border-radius: 15px 50px;
+    }
+
+    .linkedin_image{
+        border: 2px ridge black;
+        border-radius: 15px 50px;
+    }
+
+    .social_media_links :hover{
+        transform: translateY(-2px);
+    }
