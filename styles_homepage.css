@@ -28,6 +28,7 @@
             align-items: center; /* Horizontally center */
             justify-content: center; /* Vertically center */
             height: 100%; /* Set a height if necessary */
+            visibility:hidden;
         }
 
 
@@ -35,8 +36,9 @@
           
           background-color: rgba(0, 0, 0, 0.5);
           margin: 40px;
-          animation: scale-up 2.0s ease-out forwards;
+          animation: fadeInAnimation 2.0s ease-out forwards;
           animation-delay: 0.5s;
+
          
       }
 
@@ -88,6 +90,10 @@
           animation: slide-up 10s linear infinite 0s;
           opacity: 0;
         }
+
+        .centered-content.animate {
+          animation: fadeInAnimation 1s ease-out forwards;
+        }
         
         /* Define the keyframes for the sliding animation */
         @keyframes slide-up {
@@ -113,10 +119,7 @@
         .slider-item:nth-child(5) { animation-delay: 8s; }
 
 
-        @keyframes scale-up {
-          from { transform: scale(0.95); opacity: 0; }
-          to { transform: scale(1); opacity: 1; }
-        }
+        
         
 
         #cursor {
@@ -136,5 +139,20 @@
 
           .body{
             margin-left: 0;
+          }
+        }
+
+        @keyframes fadeInAnimation {
+          0% {
+            visibility: hidden;
+            opacity: 0;
+          }
+          1% {
+            visibility: visible;
+            opacity: 0;
+          }
+          100% {
+            visibility: visible;
+            opacity: 1;
           }
         }

@@ -150,6 +150,15 @@
     <script src ="typing_Effect.js"></script>
     <script src="update_RealTime.js"></script>
     <script src="slideshow_Home.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const boxes = document.querySelectorAll('.centered-content');
+        boxes.forEach(box => {
+        box.classList.add('animate');
+        });
+    });
+    </script>
   
 </body>
 </html>
