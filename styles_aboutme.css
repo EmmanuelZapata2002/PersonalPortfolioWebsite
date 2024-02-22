@@ -48,9 +48,9 @@ hr {
    }
 
    .img-profile {
-    max-width: 400px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: 90px;
+    max-width: 75%; /* Adjust the width as needed */
+    display: block; /* Makes it a block-level element */
+    margin: auto; 
 
 }
 

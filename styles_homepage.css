@@ -35,7 +35,7 @@
       .col-md-3 {
           
           background-color: rgba(0, 0, 0, 0.5);
-          margin: 40px;
+          margin: auto;
           animation: fadeInAnimation 2.0s ease-out forwards;
           animation-delay: 0.5s;
 
@@ -154,5 +154,14 @@
           100% {
             visibility: visible;
             opacity: 1;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .col-sm-6 {
+            flex: 0 0 auto; /* Override Bootstrap's flex-grow */
+            width: 60%; /* Half-width on small screens */
+            max-width: none; /* Override Bootstrap's max-width */
+            margin: auto; /* Center the boxes */
           }
         }
