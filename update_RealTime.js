@@ -1,4 +1,5 @@
  // For the exact time to be shown at start-up of the screen.
+
  var current_time = new Date();
  var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
  var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
